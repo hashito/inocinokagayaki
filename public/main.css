@@ -1,0 +1,38 @@
+.eyebody{
+    height: 500px;
+    position: relative;
+}
+.eye{
+    position: absolute;
+    background-color:red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display:block;
+    float:left;
+    z-index: 3;
+}
+.eye_in_2{
+    z-index: 2;
+    position: relative;
+    content: "";
+    display:block;
+    background-color:#00f;
+    width: 70%;
+    height: 70%;
+    top:30%;
+    left:35%; 
+    border-radius: 50%;
+}
+.eye_in_1{
+    z-index: 1;
+    position: relative;
+    display:block;
+    content: "";
+    background-color:#fff;
+    width: 50%;
+    height: 50%;
+    top:30%;
+    left:40%;
+    border-radius: 50%;
+}
