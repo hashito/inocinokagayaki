@@ -11,6 +11,7 @@
     display:block;
     float:left;
     z-index: 3;
+    
 }
 .eye_in_2{
     z-index: 2;
@@ -36,3 +37,24 @@
     left:40%;
     border-radius: 50%;
 }
+
+@keyframes kodo00 {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.95);}
+    100% {transform: scale(0.9);}
+  }
+@keyframes kodo01 {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.92);}
+    100% {transform: scale(0.95);}
+  }
+@keyframes kodo02 {
+    0% {transform: scale(1);}
+    80% {transform: scale(0.95);}
+    100% {transform: scale(0.9);}
+  }
+  @keyframes kodo03 {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.95);}
+    100% {transform: scale(0.8);}
+  }

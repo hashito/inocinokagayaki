@@ -44,6 +44,9 @@ var app = new Vue({
                 ret.transform="matrix("+ 
                     [this.m1,this.m2,this.m3,this.m4,this.m5,this.m6].join(",")+
                     ") rotate(" + this.r + "deg)"
+                if(Number.isInteger(this.a)){
+                    ret.animation="1s ease 0s infinite alternate none running kodo0"+this.a
+                }
                 return ret;
             }
             obj.getView_eye_in_1=function(){
@@ -79,7 +82,8 @@ var app = new Vue({
                 esize:Math.round(30*Math.random()+20) ,
                 espot:Math.round(50*Math.random()) ,
                 esize_in:Math.round(10*Math.random()+40) ,
-                espot_in:Math.round(50*Math.random()) 
+                espot_in:Math.round(50*Math.random()) ,
+                a:Math.round(3*Math.random()),
             })
         },
         change:function(index,move){
@@ -116,7 +120,7 @@ var app = new Vue({
     popUpTweetWindow: function () {
         var text=`私は新しいかがやきを作りました！`
         var tg_url =`https://inochinokagayaki.hashito.biz/?points=${encodeURI(this.getJson())}`
-        const url = `https://twitter.com/intent/tweet?hashtags=inochinokagayakitools&text=${encodeURI(text)}&url=${encodeURI(tg_url)}` 
+        const url = `https://twitter.com/intent/tweet?hashtags=${encodeURI("いのちの輝き")}&text=${encodeURI(text)}&url=${encodeURI(tg_url)}` 
         const option = 'status=1,width=818,height=400,top=100,left=100'
         window.open(url, 'twitter', option)    
     },
